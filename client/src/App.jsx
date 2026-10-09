@@ -42,9 +42,10 @@ function App() {
      if (editingProduct?._id === id) {
        setEditingProduct(null);
      }
-   } catch {
-     setError("Could not delete the product.");
-   }
+   } catch (error) {
+  console.error("Delete product error:", error);
+  setError(error.message || "Could not delete the product.");
+}
  };
  const startEdit = (product) => {
    setEditingProduct(product);

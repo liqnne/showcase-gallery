@@ -18,7 +18,7 @@ function Navbar({ view, onChangeView }) {
             Gallery
             </button>
             <button className={tabClass("manage")} onClick={() => onChangeView("manage")}>
-            <Manage></Manage>
+            Manage
             </button>
             </div>
         </div>

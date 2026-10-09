@@ -15,9 +15,9 @@ function ProductForm({ editingProduct, onSubmit, onCancel }) {
    e.preventDefault();
    const formElement = e.target;
    const { name, price, description, image } = form;
-   if (!name.trim() || !price === !image) {
-     return setError("Name, price, and image are required.");
-   }
+   if (!name.trim() || !price || !image) {
+  return setError("Name, price, and image are required.");
+}
    setSaving(true);
    try {
      await onSubmit({
